@@ -78,7 +78,8 @@ public class Main {
         }else if(command == 3){ // деление
             int chisl2 = sc.nextInt();
             int znam2 = sc.nextInt();
-
+        }else if(command == 4) {// вычитание
+            print(minus(chisl1, znam1, chisl2, znam2));
         }else if(command == 5){
             int step = sc.nextInt();
             print(stepen(chisl1, znam1 , step));
