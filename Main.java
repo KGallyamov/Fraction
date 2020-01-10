@@ -45,8 +45,10 @@ public class Main {
         if(c2 != 0){
             c1 /= c2;
             z1 /= z2;
+            return new int[]{c1, z1};
+        }else{
+            return new int[]{0, -1}
         }
-        return new int[]{c1, z1};
     }
 
     public static void main(String[] args) {
