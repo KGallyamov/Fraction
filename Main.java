@@ -56,7 +56,9 @@ public class Main {
             print(multiply(chisl1, znam1, chisl2, znam2));
         }else if(command == 3){ // деление
 
-        }else{
+        }else if(command == 4){
+            print(minus(chisl1, znam1, chisl2, znam2));
+        } else{
             System.out.println("Нет такой команды");
         }
     }
