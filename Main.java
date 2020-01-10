@@ -43,6 +43,7 @@ public class Main {
         c1 -= c2;
         return new int[]{c1, z1}
     }
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int chisl1 = sc.nextInt();
