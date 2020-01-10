@@ -27,7 +27,13 @@ public class Main {
         z1 *= z2;
         return new int[]{c1, z1};
     }
-
+    public static int[] divide(int c1, int z1, int c2, int z2) {
+        if(c2 != 0){
+            c1 /= c2;
+            z1 /= z2;
+        }
+        return new int[]{c1, z1};
+    }
     public static int[] plus(int c1, int z1, int c2, int z2) {
         c1 = c1 * z2;
         c2 = c2 * z1;
@@ -35,7 +41,6 @@ public class Main {
         c1 += c2;
         return new int[]{c1, z1};
     }
-
     public static int[] minus(int c1, int z1, int c2, int z2){
         c1 = c1 * z2;
         c2 = c2 * z1;
@@ -43,6 +48,7 @@ public class Main {
         c1 -= c2;
         return new int[]{c1, z1};
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int chisl1 = sc.nextInt();
@@ -50,14 +56,20 @@ public class Main {
         int chisl2 = sc.nextInt();
         int znam2 = sc.nextInt();
         int command = sc.nextInt();
-        if(command == 1){ // сложение
-            print(plus(chisl1, znam1, chisl2, znam2));
-        }else if(command == 2){ // умножение
-            print(multiply(chisl1, znam1, chisl2, znam2));
-        }else if(command == 3){ // деление
-
-        }else{
-            System.out.println("Нет такой команды");
+        if(znam1 == 0 || znam2 == 0){
+            System.out.println("На ноль делить нельзя");
+        }else {
+            if (command == 1) { // сложение
+                print(plus(chisl1, znam1, chisl2, znam2));
+            } else if (command == 2) { // умножение
+                print(multiply(chisl1, znam1, chisl2, znam2));
+            } else if (command == 3) { // вычитание
+                print(minus(chisl1, znam1, chisl2, znam2));
+            } else if (command == 4) { // деление
+                print(divide(chisl1, znam1, chisl2, znam2));
+            } else {
+                System.out.println("Нет такой команды");
+            }
         }
     }
 }
