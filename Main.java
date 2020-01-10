@@ -33,7 +33,7 @@ public class Main {
         c2 = c2 * z1;
         z1 *= z2;
         c1 += c2;
-        return new int[]{c1, z1};
+        return new int[]{c1, z1}
     }
 
     public static int[] minus(int c1, int z1, int c2, int z2){
@@ -41,9 +41,8 @@ public class Main {
         c2 = c2 * z1;
         z1 *= z2;
         c1 -= c2;
-        return new int[]{c1, z1};
+        return new int[]{c1, z1}
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int chisl1 = sc.nextInt();
@@ -51,18 +50,13 @@ public class Main {
         int chisl2 = sc.nextInt();
         int znam2 = sc.nextInt();
         int command = sc.nextInt();
-        if (command == 1) { // сложение
+        if(command == 1){ // сложение
             print(plus(chisl1, znam1, chisl2, znam2));
-        } else if (command == 2) { // умножение
+        }else if(command == 2){ // умножение
             print(multiply(chisl1, znam1, chisl2, znam2));
-        } else if (command == 3) { // вычитание
-            print(minus(chisl1, znam1, chisl2, znam2));
-        } else if (command == 4) { // деление
+        }else if(command == 3){ // деление
 
-        }else if(command == 5){ // возведение в степень
-
-        }
-        else {
+        }else{
             System.out.println("Нет такой команды");
         }
     }
