@@ -27,13 +27,6 @@ public class Main {
         z1 *= z2;
         return new int[]{c1, z1};
     }
-    public static int[] divide(int c1, int z1, int c2, int z2) {
-        if(c2 != 0){
-            c1 /= c2;
-            z1 /= z2;
-        }
-        return new int[]{c1, z1};
-    }
     public static int[] plus(int c1, int z1, int c2, int z2) {
         c1 = c1 * z2;
         c2 = c2 * z1;
@@ -46,6 +39,13 @@ public class Main {
         c2 = c2 * z1;
         z1 *= z2;
         c1 -= c2;
+        return new int[]{c1, z1};
+    }
+    public static int[] divide(int c1, int z1, int c2, int z2) {
+        if(c2 != 0){
+            c1 /= c2;
+            z1 /= z2;
+        }
         return new int[]{c1, z1};
     }
 
