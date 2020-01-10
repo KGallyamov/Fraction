@@ -14,12 +14,6 @@ public class Main {
         c2 = c2 * z1;
         z1 *= z2;
         c1 += c2;
-        for (int i = 1; i < c1; i++) {
-            if (c1 % i == 0 && z1 % i == 0) {
-                c1 /= i;
-                z1 /= i;
-            }
-        }
         return new int[]{c1, z1}
     }
 
