@@ -33,7 +33,7 @@ public class Main {
         c2 = c2 * z1;
         z1 *= z2;
         c1 += c2;
-        return new int[]{c1, z1}
+        return new int[]{c1, z1};
     }
 
     public static int[] minus(int c1, int z1, int c2, int z2){
@@ -41,7 +41,7 @@ public class Main {
         c2 = c2 * z1;
         z1 *= z2;
         c1 -= c2;
-        return new int[]{c1, z1}
+        return new int[]{c1, z1};
     }
     
     public static void main(String[] args) {
