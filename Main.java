@@ -27,7 +27,6 @@ public class Main {
         z1 *= z2;
         return new int[]{c1, z1};
     }
-
     public static int[] plus(int c1, int z1, int c2, int z2) {
         c1 = c1 * z2;
         c2 = c2 * z1;
@@ -35,7 +34,6 @@ public class Main {
         c1 += c2;
         return new int[]{c1, z1};
     }
-
     public static int[] minus(int c1, int z1, int c2, int z2){
         c1 = c1 * z2;
         c2 = c2 * z1;
@@ -54,6 +52,16 @@ public class Main {
         }
         return int[]{c1, z1};
     }
+    public static int[] divide(int c1, int z1, int c2, int z2) {
+        if(c2 != 0){
+            c1 /= c2;
+            z1 /= z2;
+            return new int[]{c1, z1};
+        }else{
+            return new int[]{0, -1}
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int command = sc.nextInt();
@@ -76,6 +84,7 @@ public class Main {
             print(stepen(chisl1, znam1 , step));
         } else{
             System.out.println("Нет такой команды");
+
         }
     }
 }
